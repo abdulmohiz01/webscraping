@@ -15,15 +15,10 @@ driver.get("https://en.wikipedia.org/wiki/Main_Page")
 count = driver.find_element(By.ID, "articlecount").find_element(By.TAG_NAME, "a")
 getlink = driver.find_element(By.LINK_TEXT, "encyclopedia")
 # getlink.click()
-
 icon= driver.find_element(By.CSS_SELECTOR, "span.mw-ui-icon-search")
 search = driver.find_element(By.NAME, "search")
 icon.click()
 search.send_keys("Dickies")
 search.send_keys(Keys.RETURN)
-
-
-
-
 time.sleep(25)
 print(count.text)
